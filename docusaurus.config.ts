@@ -4,7 +4,7 @@ import type * as Preset from "@docusaurus/preset-classic";
 
 const config: Config = {
   title: "EK Notes",
-  tagline: "Dinosaurs are cool",
+  tagline: "Easy peasy notes",
   favicon: "img/favicon.ico",
 
   // Set the production url of your site here
@@ -64,19 +64,25 @@ const config: Config = {
 
   themeConfig: {
     // Replace with your project's social card
-    image: "img/docusaurus-social-card.jpg",
+    image: "img/logo.jpg",
     navbar: {
       title: "EK Notes",
       logo: {
         alt: "EK Notes Logo",
-        src: "img/logo.svg",
+        src: "img/logo.png",
       },
       items: [
         {
           type: "docSidebar",
           sidebarId: "tutorialSidebar",
           position: "left",
-          label: "Tutorial",
+          label: "AWS",
+        },
+        {
+          type: "docSidebar",
+          sidebarId: "tutorialSidebar",
+          position: "left",
+          label: "Git/Github",
         },
         {
           href: "https://blog.everydaykarmaa.com",
@@ -103,19 +109,15 @@ const config: Config = {
           ],
         },
         {
-          title: "Community",
+          title: "Social Handles",
           items: [
             {
-              label: "Stack Overflow",
-              href: "https://stackoverflow.com/questions/tagged/docusaurus",
+              label: "YouTube",
+              href: "https://youtube.com/@Everydaykarma",
             },
             {
               label: "Discord",
-              href: "https://discordapp.com/invite/docusaurus",
-            },
-            {
-              label: "Twitter",
-              href: "https://twitter.com/docusaurus",
+              href: "https://bit.ly/ek_discord",
             },
           ],
         },
@@ -124,11 +126,11 @@ const config: Config = {
           items: [
             {
               label: "Blog",
-              to: "/blog",
+              href: "https://blog.everydaykarmaa.com",
             },
             {
               label: "GitHub",
-              href: "https://github.com/facebook/docusaurus",
+              href: "https://github.com/isarojdahal/notes.everydaykarmaa.com",
             },
           ],
         },
