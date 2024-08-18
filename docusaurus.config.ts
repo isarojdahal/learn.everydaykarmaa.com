@@ -38,27 +38,26 @@ const config: Config = {
           anonymizeIP: true,
         },
         docs: {
+          path: "notes",
+          routeBasePath: "notes",
           sidebarPath: "./sidebars.ts",
+
+          // Custom sidebar for AWS
+          // sidebarPath: ({ locale, version }) =>
+          //   locale === "aws"
+          //     ? require.resolve("./awsSidebar.js")
+          //     : require.resolve("./sidebars.js"),
+          // sidebarPath: ({ locale, version }) =>
+          //   locale === "github"
+          //     ? require.resolve("./githubSidebar.js")
+          //     : require.resolve("./sidebars.js"),
+
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
-          editUrl:
-            "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/",
+          // editUrl:
+          // "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/",
         },
-        blog: {
-          showReadingTime: true,
-          feedOptions: {
-            type: ["rss", "atom"],
-            xslt: true,
-          },
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl:
-            "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/",
-          // Useful options to enforce blogging best practices
-          onInlineTags: "warn",
-          onInlineAuthors: "warn",
-          onUntruncatedBlogPosts: "warn",
-        },
+
         theme: {
           customCss: "./src/css/custom.css",
         },
@@ -78,25 +77,24 @@ const config: Config = {
       items: [
         {
           type: "docSidebar",
-          sidebarId: "tutorialSidebar",
+          sidebarId: "awsSidebar",
           position: "left",
           label: "AWS",
+          to: "/notes/aws",
         },
         {
           type: "docSidebar",
-          sidebarId: "tutorialSidebar",
+          sidebarId: "githubSidebar",
           position: "left",
           label: "Git/Github",
+          to: "/notes/github",
         },
         {
-          href: "https://blog.everydaykarmaa.com",
-          label: "Blog",
-          position: "right",
-        },
-        {
-          href: "https://github.com/isarojdahal/notes.everydaykarmaa.com",
-          label: "GitHub",
-          position: "right",
+          type: "docSidebar",
+          sidebarId: "graphqlSidebar",
+          position: "left",
+          label: "GraphQL",
+          to: "/notes/graphql",
         },
       ],
     },
@@ -105,6 +103,7 @@ const config: Config = {
       links: [
         {
           title: "Docs",
+
           items: [
             {
               label: "Tutorial",
@@ -139,7 +138,7 @@ const config: Config = {
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+      copyright: `Copyright © ${new Date().getFullYear()} EverydayKarma Notes. Built with Docusaurus.`,
     },
     prism: {
       theme: prismThemes.github,
