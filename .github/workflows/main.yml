@@ -1,11 +1,11 @@
-name: Build and Deploy frontend
+name: Build and Deploy
 
 on:
   push:
     branches: [main]
 jobs:
   build-and-deploy:
-    runs-on: [self-hosted, main]
+    runs-on: [self-hosted]
 
     steps:
       - uses: pnpm/action-setup@v3
