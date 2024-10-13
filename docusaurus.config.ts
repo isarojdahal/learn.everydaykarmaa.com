@@ -91,6 +91,13 @@ const config: Config = {
         },
         {
           type: "docSidebar",
+          sidebarId: "typeormSidebar",
+          position: "left",
+          label: "TypeORM",
+          to: "/notes/typeorm",
+        },
+        {
+          type: "docSidebar",
           sidebarId: "graphqlSidebar",
           position: "left",
           label: "GraphQL",
