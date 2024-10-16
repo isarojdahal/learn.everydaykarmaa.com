@@ -1,0 +1,14 @@
+---
+title: ES6 Modules,CommonJS, Console Object concepts
+sidebar_position: 9
+---
+
+import YouTubeEmbed from '../../src/components/YouTubeEmbed';
+
+# ES6 Modules,CommonJS, Console Object concepts
+
+<YouTubeEmbed videoId="ONBHcSJL70A" />
+
+## Source Code
+
+- [**Github**](https://github.com/isarojdahal/javascript-workshop)

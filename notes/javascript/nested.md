@@ -1,0 +1,14 @@
+---
+title: Nested and Tagged Templates, Async-Defer JS Load, Operators
+sidebar_position: 4
+---
+
+import YouTubeEmbed from '../../src/components/YouTubeEmbed';
+
+# Nested and Tagged Templates, Async-Defer JS Load, Operators
+
+<YouTubeEmbed videoId="Y067nIcH9jE" />
+
+## Source Code
+
+- [**Github**](https://github.com/isarojdahal/javascript-workshop)

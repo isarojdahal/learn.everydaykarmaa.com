@@ -1,0 +1,14 @@
+---
+title: Exception Handling in JavaScript (try,catch,finally)
+sidebar_position: 22
+---
+
+import YouTubeEmbed from '../../src/components/YouTubeEmbed';
+
+# Exception Handling in JavaScript (try,catch,finally)
+
+<YouTubeEmbed videoId="I4OeAaN-gTw" />
+
+## Source Code
+
+- [**Github**](https://github.com/isarojdahal/javascript-workshop)

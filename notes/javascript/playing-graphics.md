@@ -1,0 +1,14 @@
+---
+title: Playing Graphics in JavaScript using Canvas
+sidebar_position: 19
+---
+
+import YouTubeEmbed from '../../src/components/YouTubeEmbed';
+
+# Playing Graphics in JavaScript using Canvas
+
+<YouTubeEmbed videoId="6cnXQ7p0tKE" />
+
+## Source Code
+
+- [**Github**](https://github.com/isarojdahal/javascript-workshop)

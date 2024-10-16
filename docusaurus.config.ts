@@ -103,6 +103,13 @@ const config: Config = {
           label: "GraphQL",
           to: "/notes/graphql",
         },
+        {
+          type: "docSidebar",
+          sidebarId: "javascriptSidebar",
+          position: "left",
+          label: "JavaScript",
+          to: "/notes/javascript",
+        },
       ],
     },
     footer: {

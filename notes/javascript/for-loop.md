@@ -1,0 +1,14 @@
+---
+title: For of, for in Loops, Constructor Function, Recursive Function, IIFE, Arrow Function
+sidebar_position: 7
+---
+
+import YouTubeEmbed from '../../src/components/YouTubeEmbed';
+
+# For of, for in Loops, Constructor Function, Recursive Function, IIFE, Arrow Function
+
+<YouTubeEmbed videoId="PcFtGefsMks" />
+
+## Source Code
+
+- [**Github**](https://github.com/isarojdahal/javascript-workshop)
