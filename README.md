@@ -1,5 +1,3 @@
-# https://learn.everydaykarmaa.com
-
 This website is built using [Docusaurus](https://docusaurus.io/).
 
 ### Installation and Setup
