@@ -3,8 +3,8 @@ import type { Config } from "@docusaurus/types";
 import type * as Preset from "@docusaurus/preset-classic";
 
 const config: Config = {
-  title: "EK Notes",
-  tagline: "Easy peasy notes",
+  title: "Welcome",
+  tagline: "Learn Everyday with EverydayKarma",
   favicon: "img/favicon.ico",
 
   // Set the production url of your site here
@@ -69,12 +69,19 @@ const config: Config = {
     // Replace with your project's social card
     image: "img/logo.jpg",
     navbar: {
-      title: "EK Notes",
+      title: "learn.everydaykarmaa.com",
       logo: {
         alt: "EK Notes Logo",
         src: "img/logo.png",
       },
       items: [
+        {
+          type: "docSidebar",
+          sidebarId: "javascriptSidebar",
+          position: "left",
+          label: "JavaScript",
+          to: "/notes/javascript",
+        },
         {
           type: "docSidebar",
           sidebarId: "awsSidebar",
@@ -103,27 +110,20 @@ const config: Config = {
           label: "GraphQL",
           to: "/notes/graphql",
         },
-        {
-          type: "docSidebar",
-          sidebarId: "javascriptSidebar",
-          position: "left",
-          label: "JavaScript",
-          to: "/notes/javascript",
-        },
       ],
     },
     footer: {
       style: "dark",
       links: [
         {
-          title: "Docs",
+          title: "Websites",
 
-          // items: [
-          //   {
-          //     label: "Tutorial",
-          //     to: "/docs/intro",
-          //   },
-          // ],
+          items: [
+            {
+              label: "EverydayKarma",
+              to: "https://everydaykarmaa.com",
+            },
+          ],
         },
         {
           title: "Social Handles",

@@ -1,11 +1,11 @@
 ---
-title: Word Drop Game made
+title: Word Drop Game
 sidebar_position: 24
 ---
 
 import YouTubeEmbed from '../../src/components/YouTubeEmbed';
 
-# Word Drop Game made
+# Word Drop Game
 
 <YouTubeEmbed videoId="W3N6_sT8bqM" />
 
