@@ -1,0 +1,14 @@
+---
+title: Events Flow, ( Bubble Phase, Capture Phase), Event Delegation
+sidebar_position: 12
+---
+
+import YouTubeEmbed from '../../src/components/YouTubeEmbed';
+
+# Events Flow, ( Bubble Phase, Capture Phase), Event Delegation
+
+<YouTubeEmbed videoId="ErW2_1uEZq8" />
+
+## Source Code
+
+- [**Github**](https://github.com/isarojdahal/javascript-workshop)

@@ -1,0 +1,14 @@
+---
+title: ECMAScript
+sidebar_position: 2
+---
+
+import YouTubeEmbed from '../../src/components/YouTubeEmbed';
+
+# ECMAScript, Browser Rendering Process, Setting Environment in JS
+
+<YouTubeEmbed videoId="XfXTuPoFGPQ" />
+
+## Source Code
+
+- [**Github**](https://github.com/isarojdahal/javascript-workshop)
