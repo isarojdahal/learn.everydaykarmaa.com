@@ -58,6 +58,22 @@ const config: Config = {
           // "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/",
         },
 
+        blog: {
+          showReadingTime: true,
+          feedOptions: {
+            type: ["rss", "atom"],
+            xslt: true,
+          },
+          // Please change this to your repo.
+          // Remove this to remove the "edit this page" links.
+          editUrl:
+            "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/",
+          // Useful options to enforce blogging best practices
+          onInlineTags: "warn",
+          onInlineAuthors: "warn",
+          onUntruncatedBlogPosts: "warn",
+        },
+
         theme: {
           customCss: "./src/css/custom.css",
         },
@@ -110,6 +126,7 @@ const config: Config = {
           label: "GraphQL",
           to: "/notes/graphql",
         },
+        { to: "/blog", label: "Blog", position: "right" },
       ],
     },
     footer: {
@@ -138,21 +155,8 @@ const config: Config = {
             },
           ],
         },
-        {
-          title: "More",
-          items: [
-            {
-              label: "Blog",
-              href: "https://blog.everydaykarmaa.com",
-            },
-            {
-              label: "GitHub",
-              href: "https://github.com/isarojdahal/notes.everydaykarmaa.com",
-            },
-          ],
-        },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} EverydayKarma Notes. Built with Docusaurus.`,
+      copyright: `Copyright © 2024 -  ${new Date().getFullYear()}. Built with CDocusaurus.`,
     },
     prism: {
       theme: prismThemes.github,
