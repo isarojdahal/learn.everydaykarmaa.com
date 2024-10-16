@@ -156,7 +156,7 @@ const config: Config = {
           ],
         },
       ],
-      copyright: `Copyright © 2024 -  ${new Date().getFullYear()}. Built with CDocusaurus.`,
+      copyright: `Copyright © 2024 -  ${new Date().getFullYear()}. Built with Docusaurus.`,
     },
     prism: {
       theme: prismThemes.github,
