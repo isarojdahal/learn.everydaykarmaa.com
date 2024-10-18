@@ -1,0 +1,12 @@
+---
+title: Networking in Docker
+sidebar_position: 6
+---
+
+import YouTubeEmbed from '/src/components/YoutubeEmbed.tsx';
+
+# Networking in Docker
+
+<YouTubeEmbed videoId="xjkipOwRF6E" />
+
+
