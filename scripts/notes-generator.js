@@ -3,9 +3,9 @@ const xml2js = require("xml2js");
 const fs = require("fs-extra");
 const path = require("path");
 
-const playlistId = "PL4njvVBDLL23ldnM1oA0MJmRtbJJdkkah"; // Replace with YouTube playlist ID
-const notesName = "javascript"; // Replace with your note name
-const sourceCodeUrl = "https://github.com/isarojdahal/javascript-workshop"; // Replace with the source code URL or set as empty if not applicable
+const playlistId = ""; // Replace with your YouTube playlist ID
+const notesName = "reactjs"; // Replace with your note name
+const sourceCodeUrl = "https://github.com/isarojdahal"; // Replace with the source code URL or set as empty if not applicable
 
 async function fetchPlaylistRSS() {
   const rssUrl = `https://www.youtube.com/feeds/videos.xml?playlist_id=${playlistId}`;
@@ -41,11 +41,12 @@ async function fetchPlaylistRSS() {
           // Ensure the notes directory exists
           fs.ensureDirSync(notesDir);
 
-          // Create the Markdown content
+          // Create the Markdown content with the dynamic sidebar position
           const markdownContent = generateMarkdown(
             videoTitle,
             videoId,
-            sourceCodeUrl
+            sourceCodeUrl,
+            index + 1
           );
 
           // Write the Markdown file directly
@@ -62,7 +63,6 @@ async function fetchPlaylistRSS() {
   }
 }
 
-// Function to sanitize file names by removing or replacing invalid characters and limiting length
 function sanitizeTitle(title) {
   // Remove invalid characters and replace spaces with hyphens
   let sanitized = title
@@ -71,7 +71,6 @@ function sanitizeTitle(title) {
     .replace(/[\s]+/g, "-") // Replace spaces with hyphens
     .trim(); // Trim leading/trailing whitespace
 
-  // Limit the title length to 12 characters
   if (sanitized.length > 50) {
     sanitized = sanitized.substring(0, 50);
   }
@@ -79,13 +78,12 @@ function sanitizeTitle(title) {
   return sanitized;
 }
 
-function generateMarkdown(title, videoId, sourceCodeUrl) {
-  return `---\ntitle: ${title}\nsidebar_position: 1\n---\n\nimport YouTubeEmbed from '../../src/components/YoutubeEmbed';\n\n# ${title}\n\n<YouTubeEmbed videoId="${videoId}" />\n\n${
+function generateMarkdown(title, videoId, sourceCodeUrl, sidebarPosition) {
+  return `---\ntitle: ${title}\nsidebar_position: ${sidebarPosition}\n---\n\nimport YouTubeEmbed from '../../src/components/YoutubeEmbed';\n\n# ${title}\n\n<YouTubeEmbed videoId="${videoId}" />\n\n${
     sourceCodeUrl
       ? "## Source Code\n\n- [**Github**](" + sourceCodeUrl + ")"
       : ""
   }`;
 }
 
-// Run the script
 fetchPlaylistRSS();
