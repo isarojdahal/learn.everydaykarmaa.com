@@ -85,7 +85,7 @@ const config: Config = {
     // Replace with your project's social card
     image: "img/logo.jpg",
     navbar: {
-      title: "learn.everydaykarmaa.com",
+      title: "",
       logo: {
         alt: "EK Notes Logo",
         src: "img/logo.png",
@@ -155,8 +155,21 @@ const config: Config = {
             },
           ],
         },
+        {
+          title: "Contribute ",
+          items: [
+            {
+              label: "EverydayKarma - Website",
+              href: "https://github.com/isarojdahal/everydaykarmaa.com",
+            },
+            {
+              label: "EverydayKarma - Learn",
+              href: "https://github.com/isarojdahal/learn.everydaykarmaa.com",
+            },
+          ],
+        },
       ],
-      copyright: `Copyright © 2024 -  ${new Date().getFullYear()}. Built with Docusaurus.`,
+      copyright: `<br/>Copyright © 2024 -  ${new Date().getFullYear()}. Built by Community using Docusaurus.`,
     },
     prism: {
       theme: prismThemes.github,
