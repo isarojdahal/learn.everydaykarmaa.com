@@ -126,6 +126,13 @@ const config: Config = {
           label: "GraphQL",
           to: "/notes/graphql",
         },
+        {
+          type: "docSidebar",
+          sidebarId: "dockerSidebar",
+          position: "left",
+          label: "Docker",
+          to: "/notes/docker",
+        },
         { to: "/blog", label: "Blog", position: "right" },
       ],
     },

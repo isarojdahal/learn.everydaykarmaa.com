@@ -1,0 +1,12 @@
+---
+title: Dockerize Full stack MERN App
+sidebar_position: 7
+---
+
+import YouTubeEmbed from '/src/components/YoutubeEmbed.tsx';
+
+# Dockerize Full stack MERN App
+
+<YouTubeEmbed videoId="fCHJnefqE1w" />
+
+
