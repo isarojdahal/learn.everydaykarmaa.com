@@ -146,6 +146,7 @@ const config: Config = {
           position: "left",
           label: "ReactJS",
           to: "/notes/reactjs",
+
         },
         { to: "/blog", label: "Blog", position: "right" },
       ],
