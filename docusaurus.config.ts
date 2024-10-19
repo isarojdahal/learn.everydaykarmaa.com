@@ -128,10 +128,25 @@ const config: Config = {
         },
         {
           type: "docSidebar",
-          sidebarId: "nodeSidebar",
+          sidebarId: "dockerSidebar",
           position: "left",
-          label: "Node",
-          to: "/notes/node",
+          label: "Docker",
+          to: "/notes/docker",
+        },
+        {
+          type: "docSidebar",
+          sidebarId: "nodejsSidebar",
+          position: "left",
+          label: "NodeJS",
+          to: "/notes/nodejs",
+        },
+        {
+          type: "docSidebar",
+          sidebarId: "reactjsSidebar",
+          position: "left",
+          label: "ReactJS",
+          to: "/notes/reactjs",
+
         },
         { to: "/blog", label: "Blog", position: "right" },
       ],
