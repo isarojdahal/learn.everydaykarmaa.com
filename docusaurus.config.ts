@@ -126,6 +126,13 @@ const config: Config = {
           label: "GraphQL",
           to: "/notes/graphql",
         },
+        {
+          type: "docSidebar",
+          sidebarId: "nodeSidebar",
+          position: "left",
+          label: "Node",
+          to: "/notes/node",
+        },
         { to: "/blog", label: "Blog", position: "right" },
       ],
     },
