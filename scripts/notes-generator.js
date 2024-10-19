@@ -3,7 +3,7 @@ const xml2js = require("xml2js");
 const fs = require("fs-extra");
 const path = require("path");
 
-const playlistId = ""; // Replace with your YouTube playlist ID
+const playlistId = "PL4njvVBDLL21S6bEXRC7agpBnVPiXNbj5"; // Replace with your YouTube playlist ID
 const notesName = "reactjs"; // Replace with your note name
 const sourceCodeUrl = "https://github.com/isarojdahal"; // Replace with the source code URL or set as empty if not applicable
 
@@ -43,7 +43,7 @@ async function fetchPlaylistRSS() {
 
           // Create the Markdown content with the dynamic sidebar position
           const markdownContent = generateMarkdown(
-            videoTitle,
+            sanitizedTitle,
             videoId,
             sourceCodeUrl,
             index + 1
