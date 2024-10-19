@@ -79,11 +79,16 @@ function sanitizeTitle(title) {
 }
 
 function generateMarkdown(title, videoId, sourceCodeUrl, sidebarPosition) {
-  return `---\ntitle: ${title}\nsidebar_position: ${sidebarPosition}\n---\n\nimport YouTubeEmbed from '../../src/components/YoutubeEmbed';\n\n# ${title}\n\n<YouTubeEmbed videoId="${videoId}" />\n\n${
+  return ```---\ntitle: ${title}
+  sidebar_position: ${sidebarPosition}
+  \n---\n\nimport YouTubeEmbed from '../../src/components/YoutubeEmbed';
+  \n\n# ${title}\n\n<YouTubeEmbed videoId="${videoId}" />
+  
+  \n\n${
     sourceCodeUrl
       ? "## Source Code\n\n- [**Github**](" + sourceCodeUrl + ")"
       : ""
-  }`;
+  }```;
 }
 
 fetchPlaylistRSS();
