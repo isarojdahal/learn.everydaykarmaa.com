@@ -1,12 +1,13 @@
 import { themes as prismThemes } from "prism-react-renderer";
 import type { Config } from "@docusaurus/types";
 import type * as Preset from "@docusaurus/preset-classic";
+import tailwindPlugin from "./plugins/tailwind-config.cjs";
 
 const config: Config = {
   title: "Learn.everydaykarmaa",
   tagline: "Learn Everyday with EverydayKarma",
   favicon: "img/favicon.ico",
-
+  plugins: [tailwindPlugin],
   // Set the production url of your site here
   url: "https://learn.everydaykarmaa.com",
   // Set the /<baseUrl>/ pathname under which your site is served
