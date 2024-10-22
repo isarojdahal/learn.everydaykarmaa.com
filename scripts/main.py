@@ -62,7 +62,7 @@ def scrape_youtube_playlist_selenium(playlist_url, notes_name, source_code_url=N
 
 
 def format_title(title):
-    return title.split('|')[0].strip()
+    return title.split('|')[0].replace('in Nepali', '').strip()
 
 # this function is used to sanitize the title of the video by removing any special characters and replacing spaces with hyphens which is used in the markdown file name and url
 
@@ -70,13 +70,12 @@ def format_title(title):
 def sanitize_title(title):
     title = format_title(title)
     sanitized = re.sub(r'[<>:"/\\|?*(),]+', '',
-                       title.lower()).replace(' ', '-').strip()
+                       title.lower()).replace(' ', '-').replace('in Nepali', '').strip()
     return sanitized[:150]  # Limit the length to 150 characters
 
 
 def generate_markdown(title, video_id, source_code_url, sidebar_position):
-    source_code_section = f"\n\n## Source Code\n\n- [**Github**]({
-        source_code_url})" if source_code_url else ''
+    source_code_section = f"\n\n## Source Code\n\n- [**Github**]({source_code_url})" if source_code_url else ''
     return f"""---
 title: {title}
 sidebar_position: {sidebar_position}
@@ -91,6 +90,7 @@ import YouTubeEmbed from '../../src/components/YoutubeEmbed';
 
 
 def main():
+    print("** WARNING : Make sure not to overridde the existing notes with scripts. **")
     playlist_url = input("Enter the YouTube playlist URL: ").strip()
     notes_name = input("Enter the name for the notes folder: ").strip()
     source_code_url = input(
