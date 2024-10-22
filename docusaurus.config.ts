@@ -148,6 +148,13 @@ const config: Config = {
           label: "GraphQL",
           to: "/notes/graphql",
         },
+        {
+          type: "docSidebar",
+          sidebarId: "bunSidebar",
+          position: "left",
+          label: "Bun",
+          to: "/notes/bun",
+        },
         { to: "/blog", label: "Blog", position: "right" },
       ],
     },
