@@ -33,7 +33,6 @@ const FloatingTimer: React.FC = () => {
         <div className="fixed bottom-4 right-4 z-50 bg-[--ifm-color-primary] p-2 shadow-md rounded-lg cursor-move">
           <button
             onClick={openModal}
-            // style={{ background: "none", border: "none", fontSize: "16px" }}
             className="bg-[--ifm-color-primary] border-none text-xl text-white"
           >
             {timerActive && remainingTime !== null
