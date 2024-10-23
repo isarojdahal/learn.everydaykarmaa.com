@@ -2,6 +2,8 @@ import { themes as prismThemes } from "prism-react-renderer";
 import type { Config } from "@docusaurus/types";
 import type * as Preset from "@docusaurus/preset-classic";
 
+require("dotenv").config();
+
 const config: Config = {
   title: "Learn.everydaykarmaa",
   tagline: "Learn Everyday with EverydayKarma",
@@ -34,7 +36,7 @@ const config: Config = {
       "classic",
       {
         gtag: {
-          trackingID: "G-J2XD1WFCB6",
+          trackingID: process.env.GOOGLE_ANALYTICS_ID,
           anonymizeIP: true,
         },
         docs: {
@@ -82,8 +84,21 @@ const config: Config = {
   ],
 
   themeConfig: {
-    // Replace with your project's social card
     image: "img/logo.jpg",
+    algolia: {
+      appId: process.env.ALGOLIA_APP_ID,
+      apiKey: process.env.ALGOLIA_API_KEY,
+
+      indexName: "EverydayKarma Index",
+
+      // Optional:
+      contextualSearch: false,
+
+      replaceSearchResultPathname: {
+        from: "/notes/", // or as RegExp: /\/docs\//
+        to: "/",
+      },
+    },
     navbar: {
       title: "",
       logo: {
