@@ -88,15 +88,14 @@ const config: Config = {
     algolia: {
       appId: process.env.ALGOLIA_APP_ID,
       apiKey: process.env.ALGOLIA_API_KEY,
-
-      indexName: "EverydayKarma Index",
+      indexName: process.env.ALGOLIA_INDEX_NAME,
 
       // Optional:
       contextualSearch: false,
 
       replaceSearchResultPathname: {
         from: "/notes/", // or as RegExp: /\/docs\//
-        to: "/",
+        to: "/notes/",
       },
     },
     navbar: {
