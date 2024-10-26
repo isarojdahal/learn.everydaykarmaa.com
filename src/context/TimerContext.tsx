@@ -1,4 +1,3 @@
-// src/context/TimerContext.tsx
 import React, {
   createContext,
   useContext,
@@ -20,31 +19,45 @@ export const TimerProvider: React.FC = ({ children }) => {
   const [remainingTime, setRemainingTime] = useState<number | null>(null);
   const [timerActive, setTimerActive] = useState<boolean>(false);
   const [intervalId, setIntervalId] = useState<NodeJS.Timeout | null>(null);
-  const startTimeRef = useRef<number | null>(null);
+  const timerActiveRef = useRef(timerActive);
 
-  // Load initial state from localStorage
+  useEffect(() => {
+    timerActiveRef.current = timerActive;
+  }, [timerActive]);
+
+  // Load initial state from localStorage if available
   useEffect(() => {
     const savedTime = localStorage.getItem("remainingTime");
-    const savedStartTime = localStorage.getItem("startTime");
-
-    if (savedTime && savedStartTime) {
+    if (savedTime) {
       const parsedTime = parseInt(savedTime, 10);
-      const parsedStartTime = parseInt(savedStartTime, 10);
-      const currentTime = Date.now();
-      const elapsedTime = Math.floor((currentTime - parsedStartTime) / 1000);
-
-      const adjustedTime = parsedTime - elapsedTime;
-      if (adjustedTime > 0) {
-        setRemainingTime(adjustedTime);
+      if (parsedTime > 0) {
+        setRemainingTime(parsedTime);
         setTimerActive(true);
-        startInterval(adjustedTime);
-      } else {
-        resetTimer();
+        startInterval(parsedTime);
       }
     }
   }, []);
 
-  const startInterval = (time: number) => {
+  // Handle tab visibility changes
+  useEffect(() => {
+    const handleVisibilityChange = () => {
+      if (document.hidden) {
+        if (intervalId) clearInterval(intervalId); // Pause the timer when the tab is inactive
+      } else {
+        // Resume the timer if it was active and there is remaining time
+        if (timerActiveRef.current && remainingTime !== null) {
+          startInterval(remainingTime);
+        }
+      }
+    };
+
+    document.addEventListener("visibilitychange", handleVisibilityChange);
+    return () => {
+      document.removeEventListener("visibilitychange", handleVisibilityChange);
+    };
+  }, [remainingTime, intervalId]);
+
+  const startInterval = (initialTime: number) => {
     const id = setInterval(() => {
       setRemainingTime((prev) => {
         if (prev !== null && prev > 0) {
@@ -67,9 +80,6 @@ export const TimerProvider: React.FC = ({ children }) => {
     setRemainingTime(time);
     setTimerActive(true);
     localStorage.setItem("remainingTime", time.toString());
-    startTimeRef.current = Date.now();
-    localStorage.setItem("startTime", startTimeRef.current.toString());
-
     startInterval(time);
   };
 
@@ -80,14 +90,7 @@ export const TimerProvider: React.FC = ({ children }) => {
     setRemainingTime(null);
     setTimerActive(false);
     localStorage.removeItem("remainingTime");
-    localStorage.removeItem("startTime");
   };
-
-  useEffect(() => {
-    if (remainingTime === 0) {
-      resetTimer();
-    }
-  }, [remainingTime]);
 
   return (
     <TimerContext.Provider

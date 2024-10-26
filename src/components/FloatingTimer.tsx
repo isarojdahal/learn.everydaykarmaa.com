@@ -1,4 +1,3 @@
-// src/components/FloatingTimer.tsx
 import React, { useState, useEffect } from "react";
 import { useTimer } from "../context/TimerContext";
 import TimerModal from "./TimerModal";
