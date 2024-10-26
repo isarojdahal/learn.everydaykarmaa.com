@@ -5,6 +5,7 @@ import Layout from "@theme/Layout";
 import Heading from "@theme/Heading";
 
 import styles from "./index.module.css";
+import CodeEditor from "../components/codeEditor/CodeEditor";
 
 function HomepageHeader() {
   const { siteConfig } = useDocusaurusContext();
@@ -22,13 +23,19 @@ function HomepageHeader() {
 
 export default function Home(): JSX.Element {
   const { siteConfig } = useDocusaurusContext();
+
   return (
     <Layout
       title={`${siteConfig.title}`}
       description="Description will go into a meta tag in <head />"
     >
       <HomepageHeader />
-      <main></main>
+      <main>
+        <CodeEditor />
+      </main>
     </Layout>
   );
+}
+function useState(arg0: string): [any, any] {
+  throw new Error("Function not implemented.");
 }
