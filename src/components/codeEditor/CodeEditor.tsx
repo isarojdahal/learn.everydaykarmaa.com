@@ -31,7 +31,7 @@ function CodeEditor() {
             options={{ minimap: { enabled: false } }}
           />
         </div>
-        <div className="p-10 bg-red w-1/3 h-[200px]">
+        <div className="p-10 bg-red md:w-1/3 h-[200px] ">
           <h3>JS</h3>
           <Editor
             height="200px"
