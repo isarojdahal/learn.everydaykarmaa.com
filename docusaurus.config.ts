@@ -170,6 +170,13 @@ const config: Config = {
           label: "Bun",
           to: "/notes/bun",
         },
+        {
+          type: "docSidebar",
+          sidebarId: "systemDesignSidebar",
+          position: "left",
+          label: "System Design",
+          to: "/notes/system-design",
+        },
         { to: "/blog", label: "Blog", position: "right" },
       ],
     },
