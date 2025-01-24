@@ -1,10 +1,12 @@
 This website is built using [Docusaurus](https://docusaurus.io/).
 
 ### Installation and Setup
+- Copy the `.env.example` file to `.env`
 
 ```bash
  pnpm install && pnpm start
 ```
+
 
 ### Build
 
