@@ -8,7 +8,7 @@ interface TimerModalProps {
 
 const TimerModal: React.FC<TimerModalProps> = ({ isOpen, closeModal }) => {
   const [time, setTime] = useState<string>("");
-  const { startTimer } = useTimer();
+  const { startTimer, resetTimer } = useTimer();
 
   const handleSubmit = () => {
     const seconds = parseInt(time, 10) * 60;
@@ -17,6 +17,7 @@ const TimerModal: React.FC<TimerModalProps> = ({ isOpen, closeModal }) => {
       return;
     }
     if (!isNaN(seconds) && seconds > 0) {
+      resetTimer();
       startTimer(seconds);
       closeModal();
     }
